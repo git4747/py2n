@@ -1,3 +1,13 @@
+## sebelum memulai aplikasi kita wajib berdoa kepada Tuhan yang Maha Esa
+import getpass ## import module getpass
+while True:
+    pass1 = "3221" ## tentukan password
+    user1 = getpass.getpass(prompt="masukan password :") ## form untuk memasukan password
+    if pass1 == user1: ## pernyataan benar
+        break
+    else:
+        print("password salah, coba lagi") ## jika salah keluar peringatan dan akan diulang untuk memasukan password
+
 ## judul 
 print("masukan data diri anda")
 ## memasukan nama
@@ -76,6 +86,10 @@ while True:
         break
 
 
+import calendar ## import module calender untuk menampilkan calender
+import os ## import module system operasi yang dipakai
+os.system('clear') ## menghapus layar
+
 ## menampilkan apa yang di masukan
 print("DATA DIRI ANDA")
 print("Nama anda:",nama1)
@@ -126,4 +140,6 @@ age1 = today1 - birt1 ## menghitung umur dengan cara mengurangi hari ini dengan 
 age2 = age1.days ## mengkonversi selilih antara hari ini dan tanggal lahir dengan format hari
 age3 = age2 // 365 ## mengkonversi dari yang semula hari menjadi tahun
 
+
+print(calendar.month(year1, mon2)) ## menampilkan calender dengan format bulan
 print("umur anda sekitar :",age3 -1,"th Sampai",age3,"th") ## menampilkan perkiraan perhitungan umur 
