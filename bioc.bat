@@ -2,6 +2,10 @@
 color 0a
 
 :A
+echo if you need password, please contact git4747 on github
+echo.
+date /t
+echo.
 echo Masukan Password untuk melanjutkan....
 set /p "pass=>"
 if NOT %pass%==monet goto :FAIL
@@ -23,6 +27,7 @@ echo #     #     #     #     #  #   #   #  #     #  #  #
 echo #   #     #       #     #  #       #  #     #  #  #
 echo ####     #######  #######  #       #  ######   #  #######
 echo.
+echo Ver.1.00
 echo.
 echo script ini masih dalam pengembangan, jadi masih terdapat
 echo banyak bug, untuk itu mohon untuk dapat dimaklumi.
@@ -33,37 +38,27 @@ echo !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 echo.
 echo -------------------------MENU-----------------------------
 echo 1. Buka dengan 1 Bio-v
-echo 2. Buka dengan banyak Bio-v
-echo 3. Mengulang membuka banyak Bio-V
-echo 4. Keluar Semua Bio-V
-echo 5. Buka Bio-V versi Lama
-echo 6. EXIT 
+echo 2. Buka dengan 5 Bio-v
+echo 3. Buka dengan banyak Bio-v
+echo 4. Mengulang membuka banyak Bio-V
+echo 5. Keluar Semua Bio-V
+echo 6. Buka Bio-V versi Lama
+echo 7. EXIT 
+echo ----------------------------------------------------------
 echo.
 echo.
-echo.
-set /p pilih=Tentukan Pilihan mu.....:
-if %pilih%==1 goto :1
-if %pilih%==2 goto :2
-if %pilih%==3 goto :3
-if %pilih%==4 goto :4
-if %pilih%==5 goto :5
-if %pilih%==6 goto :END
-if NOT %pilih%==1 goto :false
-if NOT %pilih%==2 goto :false
-if NOT %pilih%==3 goto :false
-if NOT %pilih%==4 goto :false
-if NOT %pilih%==5 goto :false
-if NOT %pilih%==6 goto :false
 
-:false
-cls
-echo tolong masukan angka yang benar!!
-echo.
-echo.
-pause
-goto :menu
+CHOICE /T 30 /C 1234567 /D 7 /M "Tekan angka....."
+if "%ERRORLEVEL%" == "7" goto :END
+if "%ERRORLEVEL%" == "6" goto :6
+if "%ERRORLEVEL%" == "5" goto :5
+if "%ERRORLEVEL%" == "4" goto :4
+if "%ERRORLEVEL%" == "3" goto :3
+if "%ERRORLEVEL%" == "2" goto :2
+if "%ERRORLEVEL%" == "1" goto :1
 
 :1
+echo |set /p=Seruyan 4567|clip
 C:
 cd "C:\BIOVTA63"
 start BIOVTNA63.exe
@@ -71,6 +66,19 @@ cls
 goto :menu
 
 :2
+echo |set /p=Seruyan 4567|clip
+C:
+cd "C:\BIOVTA63"
+start BIOVTNA63.exe
+start BIOVTNA63.exe
+start BIOVTNA63.exe
+start BIOVTNA63.exe
+start BIOVTNA63.exe
+cls
+goto :menu
+
+:3
+echo |set /p=Seruyan 4567|clip
 cls
 echo.
 echo.
@@ -128,7 +136,8 @@ endlocal
 cls
 goto :menu
 
-:3
+:4
+echo |set /p=Seruyan 4567|clip
 cls
 echo killing program.....
 taskkill /IM BIOVTNA63.exe /f
@@ -168,14 +177,15 @@ endlocal
 cls
 goto :menu
 
-:4
+:5
 cls
 echo killing program.....
 taskkill /IM BIOVTNA63.exe /f
 cls
 goto :menu
 
-:5
+:6
+echo |set /p=Seruyan 4567|clip
 C:
 cd "C:\BIOVTA63"
 start BIOVTNA63old.exe
@@ -188,6 +198,7 @@ cls
 echo.
 echo.
 echo Created by dzombie47
+echo please visit on github : github.com/git4747
 echo Good Bye.....
 echo.
 echo.
